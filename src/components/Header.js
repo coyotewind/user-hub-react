@@ -18,7 +18,7 @@ function Header({ currentUser, setCurrentUser, userList }) {
     const handleSelectChange = (event) => {
         const id = event.target.value;
         const user = userList.find(user => { 
-            return user.id == id
+            return user.id === id
         });
         setSelectedUser(user);
     };
@@ -41,7 +41,7 @@ function Header({ currentUser, setCurrentUser, userList }) {
                 {
                     currentUser
                     ? <div>
-                        <NavLink to="/posts" activeClssName="current">Posts</NavLink>
+                        <NavLink to="/posts" activeClassName="current">Posts</NavLink>
                         <NavLink to="todos" activeClassName="current">Todos</NavLink>
                         <button onClick={ handleUserLogout }>Log Out, { currentUser.username }</button>
                     </div>
